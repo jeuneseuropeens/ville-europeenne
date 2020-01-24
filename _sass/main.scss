@@ -1,9 +1,22 @@
-body {
-  background: #FECB2F url("../../assets/img/ville-europeenne-flou.png") no-repeat center;
-  background-size: contain;
-  height: 100vh;
+section {
+  margin: 0 -9999px;
+  padding: 50px 9999px;
+
+  //min-height: 300px;
 }
 
-.coming-soon {
-  text-shadow: 0 0 20px black;
+.icon-antoine {
+  height: 150px;
 }
+
+/*
+section:before {
+  //display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 9600px;
+  right: 50%;
+  background: green;
+}*/
