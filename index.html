@@ -1,79 +1,125 @@
 ---
 title: Accueil
 ---
-<main>
-    <section class="bg-yellow">
+<main class="px-3 px-md-5">
+    <section class="">
         <div class="row">
-            <div class="col d-flex flex-column justify-content-center">
-                <h2>Qu'est-ce que le {{ site.data.identity.name }} ?</h2>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci assumenda debitis expedita, ipsa
-                    ipsum, iusto minima natus nobis non nulla omnis perferendis, quae qui rem reprehenderit unde voluptatibus
-                    voluptatum. Amet atque beatae cum deleniti dicta distinctio exercitationem facere fuga fugiat, illum libero
-                    molestias officia quisquam recusandae repellat sit sunt.</p>
+            <div class="col d-flex flex-column justify-content-center text-justify">
+                <h2 class="pb-4">Qu'est-ce que le {{ site.data.identity.name }} ?</h2>
+                <p>
+                    C'est un label qui <strong>récompense les communes pour leur engagement européen</strong>, en les incitant à mettre en place des actions symboliques et pratiques pour leurs citoyens.
+                </p>
+                <p>
+                    Il comprend cinq niveaux qui <strong>permettent aux citoyens de voir en un coup d'oeil les réalisations européennes dans leur commune</strong> et reflètent l'engagement européen d'une municipalité.
+                </p>
+                <div class="row mb-n3">
+                    <div class="col-8 col-md-10 col-lg-8 col-xl-6">
+                        <img src="assets/img/drapeaux.gif" alt="" class="img-fluid">
+                    </div>
+                </div>
             </div>
             <div class="col d-none d-md-block col-auto">
-                <img src="/assets/img/noun_Citizen_2762935.png" alt="" class="img-fluid" width="200">
+                <img src="/assets/img/medal-icon.png" alt="" class="img-fluid" width="200">
             </div>
         </div>
     </section>
-    <section>
+    <section class="bg-yellow">
         <div class="row">
             <div class="col d-none d-md-block col-auto">
-                <img src="/assets/img/noun_Citizen_2762935.png" alt="" class="img-fluid" width="200">
+                <img src="/assets/img/icon.png" alt="" class="img-fluid" width="200">
             </div>
-            <div class="col d-flex flex-column justify-content-center">
-                <h2>Pourquoi ce label ?</h2>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci assumenda debitis expedita, ipsa
-                    ipsum, iusto minima natus nobis non nulla omnis perferendis, quae qui rem reprehenderit unde voluptatibus
-                    voluptatum. Amet atque beatae cum deleniti dicta distinctio exercitationem facere fuga fugiat, illum libero
-                    molestias officia quisquam recusandae repellat sit sunt.</p>
+            <div class="col d-flex flex-column justify-content-center text-justify">
+                <h2 class="pb-4">Pourquoi ce label ?</h2>
+                <p>
+                    <strong>Faire vivre l'Europe dans nos villes et villages</strong>, voilà objectif de ce Label Ville Européenne.
+                </p>
+                <p>
+                    L'Union européenne, c'est des bénéfices très concrets dans notre vie de tous les jours.
+                </p>
+                <p class="mb-0">
+                    Ce label a <strong>pour objectif de rendre visibles ces bénéfices européens, et de faire vivre
+                    l'esprit européen dans nos villes</strong>.
+                </p>
             </div>
         </div>
+    </section>
+    <!-- 4 thèmes -->
+    <section>
+        <h2>Les 4 grands thèmes du {{ site.data.identity.name }}</h2>
+        <p class="my-4">
+            Parler d'Europe peut se faire de multiples manières. Au sein du Label, quatre grandes catégories d'objectifs
+            ont été retenues.
+        </p>
+        <ul class="list-unstyled row text-white text-center h5 my-4 mb-0">
+            {% for theme in site.data.index.themes %}
+            <li class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                <div class="bg-{{ theme.bg-color }} p-3 d-flex flex-column align-items-center">
+                    {{ theme.title | upcase }}
+                    <img src="{{ theme.img-src }}" class="img-fluid icon-antoine my-3" alt="">
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <a class="btn btn-blue btn-lg mr-auto media" href="#">
+            <i class="feather-icons-nav align-self-center" data-feather="download"></i>
+            <span class="media-body">Consulter la charte du {{ site.data.identity.name }}</span>
+        </a>
     </section>
     <section class="bg-blue text-white">
         <div class="row">
             <div class="col d-flex flex-column justify-content-center">
-                <h2>Qui peut signer la charte du Label Ville Européenne ?</h2>
-                <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci assumenda debitis expedita, ipsa
-                    ipsum, iusto minima natus nobis non nulla omnis perferendis, quae qui rem reprehenderit unde voluptatibus
-                    voluptatum. Amet atque beatae cum deleniti dicta distinctio exercitationem facere fuga fugiat, illum libero
-                    molestias officia quisquam recusandae repellat sit sunt.</p>
+                <h2 class="pb-4">Qui peut signer la charte du {{ site.data.identity.name }} ?</h2>
+                <p class="text-justify">
+                    Nous invitons les <strong>têtes de liste aux élections municipales</strong> à signer la charte Ville Européenne.
+                </p>
+                <p class="mb-3">
+                    Une fois élus, ils et elles s'engagent <strong>à travailler à la mise en place d'actions en faveur
+                    de l'Europe</strong> dans leur commune.
+                </p>
+                <a class="btn btn-light btn-lg mr-auto media mt-3" href="#">
+                    <i class="feather-icons-nav align-self-center mr-3" data-feather="edit-3"></i>
+                    <span class="media-body">Je suis candidat(e) aux élections municipales et je souhaite signer la charte</span>
+                </a>
             </div>
             <div class="col d-none d-md-block col-auto">
-                <img src="/assets/img/noun_Citizen_2762935.png" alt="" class="img-fluid" width="200">
+                <img src="/assets/img/icon-Signature.png" alt="" class="img-fluid" width="200">
             </div>
         </div>
+
+
     </section>
-    <section>
-        <h2>Les 4 grand thèmes du Label Ville Européenne</h2>
-        <ul class="list-unstyled row text-white text-center h3">
-            <li class="col-12 col-sm-6 col-md-3 ">
-                <div class="bg-topic1 p-3">
-                    {{ "Pédagogie" | upcase }}
-                    <img src="assets/img/noun_Teacher_1903757.png" class="img-fluid icon-antoine" alt="">
-                </div>
-            </li>
-            <li class="col-12 col-sm-6 col-md-3">
-                <div class="bg-topic2 p-3">
-                    {{ "Action partenariale" | upcase }}
-                    <img src="assets/img/noun_partners_1172130.png" class="img-fluid icon-antoine" alt="">
-                </div>
-            </li>
-            <li class="col-12 col-sm-6 col-md-3">
-                <div class="bg-topic3 p-3">
-                    {{ "Citoyenneté" | upcase }}
-                    <img src="assets/img/noun_Citizen_2762935.png" class="img-fluid icon-antoine" alt="">
-                </div>
-            </li>
-            <li class="col-12 col-sm-6 col-md-3">
-                <div class="bg-topic4 p-3">
-                  {{ "Culture" | upcase }}
-                  <img src="assets/img/noun_Arts%20and%20Culture_13644.png" class="img-fluid icon-antoine" alt="">
-                </div>
-            </li>
+
+    <section class="bg-white h-100">
+
+
+
+        <ul class="list-group">
+            {% for signataire in site.data.signataires.signataires | sort_natural %}
+                <li class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between h5">
+                        <h5 class="mt-2">
+                            {{ signataire.prenom }} {{ signataire.nom }}
+                            {% if signataire.etiquette or signataire.liste %}
+                                <span class="badge badge-light align-self-center">
+                                    {% if signataire.etiquette %}
+                                        {{ signataire.liste }}
+                                    {% endif %}
+                                    {% if signataire.etiquette %}
+                                        {% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}
+                                    {% endif %}
+                                </span>
+                            {% endif %}
+                        </h5>
+                    </div>
+                    <p><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i>{{ signataire.ville }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul>
+
+            <!--{% for dpt in site.data.departements %}
+                <li>{{ dpt.nom }}</li>
+            {% endfor %}-->
         </ul>
     </section>
-    <section></section>
-    <section></section>
-    <section></section>
 </main>
