@@ -18,16 +18,16 @@ title: Accueil
                     </div>
                 </div>
             </div>
-            <div class="col d-none d-md-block col-auto">
+            <!-- <div class="col d-none d-md-block col-auto">
                 <img src="/assets/img/medal-icon.png" alt="" class="img-fluid" width="200">
-            </div>
+            </div> -->
         </div>
     </section>
     <section class="bg-yellow">
         <div class="row">
-            <div class="col d-none d-md-block col-auto">
+            <!-- <div class="col d-none d-md-block col-auto">
                 <img src="/assets/img/icon.png" alt="" class="img-fluid" width="200">
-            </div>
+            </div> -->
             <div class="col d-flex flex-column justify-content-center text-justify">
                 <h2 class="pb-4">Pourquoi ce label ?</h2>
                 <p>
@@ -60,10 +60,21 @@ title: Accueil
             </li>
             {% endfor %}
         </ul>
-        <a class="btn btn-blue btn-lg mr-auto media" href="#">
-            <i class="feather-icons-nav align-self-center" data-feather="download"></i>
-            <span class="media-body">Consulter la charte du {{ site.data.identity.name }}</span>
-        </a>
+        <div class="row">
+            <div class="col-12 col-lg-6 mt-3">
+                <a class="btn btn-yellow btn-lg mr-auto media" href="/assets/uploads/Label-Ville-UE-Charte.pdf">
+                    <i class="feather-icons-nav align-self-center" data-feather="download"></i>
+                    <span class="media-body">Consulter la charte</span>
+                </a>
+            </div>
+            <div class="col-12 col-lg-6 mt-3">
+                <a class="btn btn-yellow btn-lg mr-auto media" href="mailto:ville-europeenne@jeunes-europeens.org">
+                    <i class="feather-icons-nav align-self-center" data-feather="send"></i>
+                    <span class="media-body">Nous contacter</span>
+                </a>
+            </div>
+        </div>
+
     </section>
     <section class="bg-blue text-white">
         <div class="row">
@@ -76,7 +87,7 @@ title: Accueil
                     Une fois élus, ils et elles s'engagent <strong>à travailler à la mise en place d'actions en faveur
                     de l'Europe</strong> dans leur commune.
                 </p>
-                <a class="btn btn-light btn-lg mr-auto media mt-3" href="#">
+                <a class="btn btn-light btn-lg mr-auto media mt-3" href="/assets/uploads/Label-Ville-UE-Charte.pdf">
                     <i class="feather-icons-nav align-self-center mr-3" data-feather="edit-3"></i>
                     <span class="media-body">Je suis candidat(e) aux élections municipales et je souhaite signer la charte</span>
                 </a>
@@ -89,37 +100,74 @@ title: Accueil
 
     </section>
 
-    <section class="bg-white h-100">
+    <!--<section class="bg-white h-100">
+        <h2 class="mb-4">Ils se sont déjà engagés à respecter la charte !</h2>
+        {% assign signataires = site.data.signataires.signataires | group_by: "departement" | sort_natural: "departement" %}
+        {% for group in signataires %}
 
+        {% assign departement = site.data.departements | where: "code", group.name %}
+        {% for departement in departement %}
+        <h3 class="h4 mt-4 mb-2">{{ departement.nom }}</h3>
+        {% endfor %}
 
-
-        <ul class="list-group">
-            {% for signataire in site.data.signataires.signataires | sort_natural %}
-                <li class="list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-between h5">
-                        <h5 class="mt-2">
-                            {{ signataire.prenom }} {{ signataire.nom }}
-                            {% if signataire.etiquette or signataire.liste %}
-                                <span class="badge badge-light align-self-center">
-                                    {% if signataire.etiquette %}
-                                        {{ signataire.liste }}
-                                    {% endif %}
-                                    {% if signataire.etiquette %}
-                                        {% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}
-                                    {% endif %}
-                                </span>
-                            {% endif %}
-                        </h5>
-                    </div>
-                    <p><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i>{{ signataire.ville }}</p>
-                </li>
+        <div class="row">
+            {% assign signataires = group.items | sort_natural: "nom" %}
+            {% for signataire in signataires %}
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <div class="d-flex w-100 justify-content-between h5">
+                            <h5 class="mt-2">
+                                {{ signataire.prenom }} {{ signataire.nom }}
+                                <br>{% if signataire.etiquette or signataire.liste %}<span class="badge badge-light align-self-center">{% if signataire.etiquette %}{{ signataire.liste }}{% endif %} {% if signataire.etiquette %}{% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}{% endif %}</span>{% endif %}
+                            </h5>
+                        </div>
+                        <p><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i>{{ signataire.ville }}</p>                </div>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
-        <ul>
+        </div>
+        {% endfor %}
+    </section>-->
 
-            <!--{% for dpt in site.data.departements %}
-                <li>{{ dpt.nom }}</li>
-            {% endfor %}-->
-        </ul>
+    <section class="bg-white h-100">
+        <h2 class="mb-4">Ils se sont déjà engagés à respecter la charte !</h2>
+        {% assign signataires = site.data.signataires.signataires | sort_natural: "departement" | group_by: "departement" %}
+        <div class="row">
+            {% for group in signataires %}
+                <div class="col-12 col-lg-6">
+                    {% assign departement = site.data.departements | where: "code", group.name %}
+                    {% for departement in departement %}
+                        <h3 class="h4 mt-4 mb-2"><small>{{ departement.code }} -</small> {{ departement.nom }}</h3>
+                    {% endfor %}
+
+                    <ul class="list-group">
+                        {% assign signataires = group.items | sort_natural: "nom" %}
+                        {% for signataire in signataires %}
+                            <li class="list-group-item list-group-item-action">
+                                <div class="d-flex w-100 justify-content-between h5">
+                                    <h5 class="mt-2">
+                                        {{ signataire.prenom }} {{ signataire.nom }}
+                                        {% if signataire.etiquette or signataire.liste %}
+                                        <span class="badge badge-light align-self-center">
+                                                {% if signataire.etiquette %}
+                                                    {{ signataire.liste }}
+                                                {% endif %}
+                                                {% if signataire.etiquette %}
+                                                    {% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}
+                                                {% endif %}
+                                            </span>
+                                        {% endif %}
+                                    </h5>
+                                </div>
+                                <p><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i>{{ signataire.ville }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!--{% capture divider %}<div class="w-100"></div>{% endcapture %}{% cycle "", divider %}-->
+
+            {% endfor %}
+        </div>
     </section>
 </main>
