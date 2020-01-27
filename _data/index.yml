@@ -1,0 +1,13 @@
+themes:
+  - title: Pédagogie
+    img-src: assets/img/icon-Pedagogie.png
+    bg-color: topic1
+  - title: Coopération
+    img-src: assets/img/icon-Cooperation.png
+    bg-color: topic2
+  - title: Citoyenneté
+    img-src: assets/img/icon-Citoyennete.png
+    bg-color: topic3
+  - title: Culture
+    img-src: assets/img/icon-Culture.png
+    bg-color: topic4

@@ -1,0 +1,107 @@
+signataires:
+  - prenom: Alexis
+    nom: Izard
+    ville: Savigny-sur-Orge
+    departement: 91
+    liste:
+    etiquette: LREM
+  - prenom: Valérie
+    nom: Oppelt
+    ville: Nantes
+    departement: 44
+    liste: Nantes avec Vous
+    etiquette: LREM
+  - prenom: Johanna
+    nom: Rolland
+    ville: Nantes
+    departement: 44
+    liste: Nantes en Confiance
+    etiquette: PS
+  - prenom: Alain
+    nom: Fontanel
+    ville: Strasbourg
+    departement: 67
+    liste:
+    etiquette: LREM, Modem, Agir, société civile
+  - prenom: Mathieu
+    nom: Cahn
+    ville: Strasbourg
+    departement: 67
+    liste:
+    etiquette: PS
+  - prenom: Jeanne
+    nom: Barseghian
+    ville: Strasbourg
+    departement: 67
+    liste:
+    etiquette: EELV, GE
+  - prenom: Martine
+    nom: Aubry
+    ville: Lille
+    departement: 59
+    liste:
+    etiquette: PS
+  - prenom: Victor
+    nom: Provost
+    ville: Thiron-Gardais
+    departement: 28
+    liste:
+    etiquette:
+  - prenom: Pascal
+    nom: Landréat
+    ville: Pont Sainte-Marie
+    departement: 10
+    liste:
+    etiquette:
+  - prenom: Nicolas
+    nom: Mayer-Rossignol
+    ville: Rouen
+    departement: 76
+    liste: FiersdeRouen
+    etiquette:
+  - prenom: Baptiste
+    nom: Chapuis
+    ville: Orléans
+    departement: 45
+    liste: Faire respirer Orléans
+    etiquette: PS
+  - prenom: Tristan
+    nom: Atmania
+    ville: Saint-Avold
+    departement: 57
+    liste: Alternative crédible
+    etiquette:
+  - prenom: Frédéric
+    nom: Leturque
+    ville: Arras
+    departement: 62
+    liste:
+    etiquette:
+  - prenom: Martial
+    nom: Caillaud
+    ville: La Mothe-Achard
+    departement: 85
+    liste:
+    etiquette:
+  - prenom: Béatrice
+    nom: Agamennone
+    ville: Metz
+    departement: 57
+    liste: Energies pour Metz
+    etiquette:
+  - prenom: François-Xavier
+    nom: Priollaud
+    ville: Louviers
+    departement: 27
+    liste:
+    etiquette:
+  - prenom: Julie
+    nom: Laernoes
+    ville: Nantes
+    departement: 44
+    liste: Nantes Ensemble
+    etiquette: EELV
+    
+     
+    
+    

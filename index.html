@@ -1,13 +1,179 @@
 ---
 title: Accueil
 ---
-<a href="https://twitter.com/VilleEuropeenne" class="text-white text-decoration-none">
-    <div class="coming-soon d-flex flex-column align-items-center justify-content-center vh-100 text-center">
-        <img src="assets/img/logo-je.png" alt="" width="200">
-        <h1 class="mt-5">Rendez-vous ici lundi prochain !</h1>
-        <p class="h2 mt-4">
-                Il paraît que les @JeunesEuropeens vont lancer quelque chose&nbsp;😯<br class="d-none d-lg-block">
-                Ça&nbsp;parlera Europe, villes et villages ! #StayTuned&nbsp;🇪🇺&nbsp;🏙
+<main class="px-3 px-md-5">
+    <section class="">
+        <div class="row">
+            <div class="col d-flex flex-column justify-content-center text-justify">
+                <h2 class="pb-4">Qu'est-ce que le {{ site.data.identity.name }} ?</h2>
+                <p>
+                    C'est un label qui <strong>récompense les communes pour leur engagement européen</strong>, en les incitant à mettre en place des actions symboliques et pratiques pour leurs citoyens.
+                </p>
+                <p>
+                    Il comprend cinq niveaux qui <strong>permettent aux citoyens de voir en un coup d'oeil les réalisations européennes dans leur commune</strong> et reflètent l'engagement européen d'une municipalité.
+                </p>
+                <div class="row mb-n3">
+                    <div class="col-8 col-md-10 col-lg-8 col-xl-6">
+                        <img src="assets/img/drapeaux.gif" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col d-none d-md-block col-auto">
+                <img src="/assets/img/medal-icon.png" alt="" class="img-fluid" width="200">
+            </div> -->
+        </div>
+    </section>
+    <section class="bg-yellow">
+        <div class="row">
+            <!-- <div class="col d-none d-md-block col-auto">
+                <img src="/assets/img/icon.png" alt="" class="img-fluid" width="200">
+            </div> -->
+            <div class="col d-flex flex-column justify-content-center text-justify">
+                <h2 class="pb-4">Pourquoi ce label ?</h2>
+                <p>
+                    <strong>Faire vivre l'Europe dans nos villes et villages</strong>, voilà objectif de ce Label Ville Européenne.
+                </p>
+                <p>
+                    L'Union européenne, c'est des bénéfices très concrets dans notre vie de tous les jours.
+                </p>
+                <p class="mb-0">
+                    Ce label a <strong>pour objectif de rendre visibles ces bénéfices européens, et de faire vivre
+                    l'esprit européen dans nos villes</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- 4 thèmes -->
+    <section>
+        <h2>Les 4 grands thèmes du {{ site.data.identity.name }}</h2>
+        <p class="my-4">
+            Parler d'Europe peut se faire de multiples manières. Au sein du Label, quatre grandes catégories d'objectifs
+            ont été retenues.
         </p>
-    </div>
-</a>
+        <ul class="list-unstyled row text-white text-center h5 my-4 mb-0">
+            {% for theme in site.data.index.themes %}
+            <li class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                <div class="bg-{{ theme.bg-color }} p-3 d-flex flex-column align-items-center">
+                    {{ theme.title | upcase }}
+                    <img src="{{ theme.img-src }}" class="img-fluid icon-antoine my-3" alt="">
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="row">
+            <div class="col-12 col-lg-6 mt-3">
+                <a class="btn btn-yellow btn-lg mr-auto media" href="/assets/uploads/Label-Ville-UE-Charte.pdf">
+                    <i class="feather-icons-nav align-self-center" data-feather="download"></i>
+                    <span class="media-body">Consulter la charte</span>
+                </a>
+            </div>
+            <div class="col-12 col-lg-6 mt-3">
+                <a class="btn btn-yellow btn-lg mr-auto media" href="mailto:ville-europeenne@jeunes-europeens.org">
+                    <i class="feather-icons-nav align-self-center" data-feather="send"></i>
+                    <span class="media-body">Nous contacter</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <section class="bg-blue text-white">
+        <div class="row">
+            <div class="col d-flex flex-column justify-content-center">
+                <h2 class="pb-4">Qui peut signer la charte du {{ site.data.identity.name }} ?</h2>
+                <p class="text-justify">
+                    Nous invitons les <strong>têtes de liste aux élections municipales</strong> à signer la charte Ville Européenne.
+                </p>
+                <p class="mb-3">
+                    Une fois élus, ils et elles s'engagent <strong>à travailler à la mise en place d'actions en faveur
+                    de l'Europe</strong> dans leur commune.
+                </p>
+                <a class="btn btn-light btn-lg mr-auto media mt-3" href="/assets/uploads/Label-Ville-UE-Charte.pdf">
+                    <i class="feather-icons-nav align-self-center mr-3" data-feather="edit-3"></i>
+                    <span class="media-body">Je suis candidat(e) aux élections municipales et je souhaite signer la charte</span>
+                </a>
+            </div>
+            <div class="col d-none d-md-block col-auto">
+                <img src="/assets/img/icon-Signature.png" alt="" class="img-fluid" width="200">
+            </div>
+        </div>
+
+
+    </section>
+
+    <!--<section class="bg-white h-100">
+        <h2 class="mb-4">Ils se sont déjà engagés à respecter la charte !</h2>
+        {% assign signataires = site.data.signataires.signataires | group_by: "departement" | sort_natural: "departement" %}
+        {% for group in signataires %}
+
+        {% assign departement = site.data.departements | where: "code", group.name %}
+        {% for departement in departement %}
+        <h3 class="h4 mt-4 mb-2">{{ departement.nom }}</h3>
+        {% endfor %}
+
+        <div class="row">
+            {% assign signataires = group.items | sort_natural: "nom" %}
+            {% for signataire in signataires %}
+            <div class="col-12 col-md-6 col-xl-4">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <div class="d-flex w-100 justify-content-between h5">
+                            <h5 class="mt-2">
+                                {{ signataire.prenom }} {{ signataire.nom }}
+                                <br>{% if signataire.etiquette or signataire.liste %}<span class="badge badge-light align-self-center">{% if signataire.etiquette %}{{ signataire.liste }}{% endif %} {% if signataire.etiquette %}{% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}{% endif %}</span>{% endif %}
+                            </h5>
+                        </div>
+                        <p><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i>{{ signataire.ville }}</p>                </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </section>-->
+
+
+
+    <section class="bg-white h-100">
+        <h2 class="mb-4">Ils se sont déjà engagés à respecter la charte !</h2>
+
+        {% assign signataires_par_ville = site.data.signataires.signataires | sort_natural: "ville" | group_by: "ville" %}
+        <div class="row">
+            {% for group in signataires_par_ville %}
+            <div class="col-12 col-lg-6">
+                <ul class="list-group">
+                    {% assign signataires = group.items | sort_natural: "nom" %}
+
+                    {% for signataire in signataires %}
+                        {% capture ville %}{{signataire.ville}}&nbsp;<small>{{ signataire.departement }}</small>{% endcapture %}
+                    {% endfor %}
+
+
+                    <h3 class="h4 mt-4 mb-2 d-flex align-items-baseline"><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i> {{ ville }}</h3>
+
+                    {% for signataire in signataires %}
+                    <li class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between h5">
+                            <h5 class="mt-2 m-0">
+                                {{ signataire.prenom }} {{ signataire.nom }}
+                                {% if signataire.etiquette or signataire.liste %}
+                                    <span class="badge badge-light align-self-center">
+                                        {% if signataire.etiquette %}
+                                            {{ signataire.liste }}
+                                        {% endif %}
+                                        {% if signataire.etiquette %}
+                                            {% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}
+                                        {% endif %}
+                                    </span>
+                                {% endif %}
+                            </h5>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!--{% capture divider %}<div class="w-100"></div>{% endcapture %}{% cycle "", divider %}-->
+
+            {% endfor %}
+        </div>
+    </section>
+
+</main>
