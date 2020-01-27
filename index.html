@@ -130,44 +130,50 @@ title: Accueil
         {% endfor %}
     </section>-->
 
+
+
     <section class="bg-white h-100">
         <h2 class="mb-4">Ils se sont déjà engagés à respecter la charte !</h2>
-        {% assign signataires = site.data.signataires.signataires | sort_natural: "departement" | group_by: "departement" %}
+
+        {% assign signataires_par_ville = site.data.signataires.signataires | sort_natural: "ville" | group_by: "ville" %}
         <div class="row">
-            {% for group in signataires %}
-                <div class="col-12 col-lg-6">
-                    {% assign departement = site.data.departements | where: "code", group.name %}
-                    {% for departement in departement %}
-                        <h3 class="h4 mt-4 mb-2"><small>{{ departement.code }} -</small> {{ departement.nom }}</h3>
+            {% for group in signataires_par_ville %}
+            <div class="col-12 col-lg-6">
+                <ul class="list-group">
+                    {% assign signataires = group.items | sort_natural: "nom" %}
+
+                    {% for signataire in signataires %}
+                        {% capture ville %}{{signataire.ville}}&nbsp;<small>{{ signataire.departement }}</small>{% endcapture %}
                     {% endfor %}
 
-                    <ul class="list-group">
-                        {% assign signataires = group.items | sort_natural: "nom" %}
-                        {% for signataire in signataires %}
-                            <li class="list-group-item list-group-item-action">
-                                <div class="d-flex w-100 justify-content-between h5">
-                                    <h5 class="mt-2">
-                                        {{ signataire.prenom }} {{ signataire.nom }}
-                                        {% if signataire.etiquette or signataire.liste %}
-                                        <span class="badge badge-light align-self-center">
-                                                {% if signataire.etiquette %}
-                                                    {{ signataire.liste }}
-                                                {% endif %}
-                                                {% if signataire.etiquette %}
-                                                    {% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}
-                                                {% endif %}
-                                            </span>
+
+                    <h3 class="h4 mt-4 mb-2 d-flex align-items-baseline"><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i> {{ ville }}</h3>
+
+                    {% for signataire in signataires %}
+                    <li class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between h5">
+                            <h5 class="mt-2 m-0">
+                                {{ signataire.prenom }} {{ signataire.nom }}
+                                {% if signataire.etiquette or signataire.liste %}
+                                    <span class="badge badge-light align-self-center">
+                                        {% if signataire.etiquette %}
+                                            {{ signataire.liste }}
                                         {% endif %}
-                                    </h5>
-                                </div>
-                                <p><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i>{{ signataire.ville }}</p>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <!--{% capture divider %}<div class="w-100"></div>{% endcapture %}{% cycle "", divider %}-->
+                                        {% if signataire.etiquette %}
+                                            {% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}
+                                        {% endif %}
+                                    </span>
+                                {% endif %}
+                            </h5>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!--{% capture divider %}<div class="w-100"></div>{% endcapture %}{% cycle "", divider %}-->
 
             {% endfor %}
         </div>
     </section>
+
 </main>
