@@ -1,10 +1,14 @@
 header {
   position: relative;
   z-index: -10;
-  background: theme-color("blue") url("../../assets/img/waldemar-brandt-wRAHbIziQfg-unsplash.jpeg") no-repeat fixed center;
-  background-size: cover;
   height: 100vh;
   width: 100vw;
+
+  background: theme-color("blue") url("../../assets/img/waldemar-brandt-wRAHbIziQfg-unsplash.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   //transition: font-size 2s, transform 2s;
 
   /*&::after {
@@ -21,6 +25,7 @@ header {
     position: absolute;
     bottom: 0;
   }*/
+
 }
 
 main {
