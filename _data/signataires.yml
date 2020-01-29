@@ -2,8 +2,8 @@ signataires:
   - prenom: Alexis
     nom: Izard
     ville: Savigny-sur-Orge
-    departement: 
-    liste: 
+    departement:
+    liste:
     etiquette: LREM
   - prenom: Valérie
     nom: Oppelt
@@ -27,13 +27,13 @@ signataires:
     nom: Fontanel
     ville: Strasbourg
     departement: 67
-    liste: 
+    liste:
     etiquette: LREM, Modem, Agir
   - prenom: Mathieu
     nom: Cahn
     ville: Strasbourg
     departement: 67
-    liste: 
+    liste:
     etiquette: PS,
   - prenom: Jeanne
     nom: Barseghian
@@ -57,14 +57,14 @@ signataires:
     nom: Landréat
     ville: Pont Sainte-Marie
     departement: 10
-    liste: 
+    liste:
     etiquette:
   - prenom: Nicolas
     nom: Mayer-Rossignol
     ville: Rouen
     departement: 76
     liste: FiersdeRouen
-    etiquette: 
+    etiquette:
   - prenom: Baptiste
     nom: Chapuis
     ville: Orléans
@@ -75,7 +75,7 @@ signataires:
     nom: Atmania
     ville: Saint-Avold
     departement: 57
-    liste: 
+    liste:
     etiquette:
   - prenom: Frédéric
     nom: Leturque
@@ -88,19 +88,19 @@ signataires:
     ville: Les Achards
     departement: 85
     liste:
-    etiquette: 
+    etiquette:
   - prenom: Béatrice
     nom: Agamennone
     ville: Metz
     departement: 57
     liste: Energies pour Metz
-    etiquette: 
+    etiquette:
   - prenom: François-Xavier
     nom: Priollaud
     ville: Louviers
     departement: 27
     liste:
-    etiquette: 
+    etiquette:
   - prenom: Violette
     nom: Spillebout
     ville: Lille
@@ -113,14 +113,6 @@ signataires:
     departement: 17
     liste: Surgères pour tous, Ensemble, Construisons l'avenir
     etiquette:
-<<<<<<< Updated upstream
-  - prenom: Julie
-    nom: Laernoes
-    ville: Nantes
-    departement: 44
-    liste: Nantes Ensemble
-    etiquette: EELV
-=======
   - prenom: Laurent
     nom: Soulié
     ville: Tournefeuille
@@ -131,7 +123,7 @@ signataires:
     nom: Sallah
     ville: Grasse
     departement: 06
-    liste: Grasse ensemble 
+    liste: Grasse ensemble
     etiquette: Agir
   - prenom: Florence
     nom: Noirot
@@ -139,8 +131,3 @@ signataires:
     departement: 91
     liste: Gif Territoire d'Avenirs
     etiquette: LREM
-    
-     
-    
-    
->>>>>>> Stashed changes
