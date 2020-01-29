@@ -3,9 +3,13 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 publish_mode: editorial_workflow
 media_folder: 'assets/uploads'
+site_url: https://www.ville-europeenne.org
+display_url: https://www.ville-europeenne.org
+logo_url: https://www.ville-europeenne.org/assets/img/label-ville-europeenne.png
+show_preview_links: false
 collections:
   - name: "config"
-    label: "Config"
+    label: "Configuration"
     editor:
       preview: false
     files:
@@ -25,13 +29,27 @@ collections:
         name: "signataires"
         file: "_data/signataires.yml"
         fields:
-          - label: "Liste des signataires"
+          - label: "Signataires"
+            label_singular: "Signataire"
             name: "signataires"
             widget: "list"
             fields:
               - {label: Prénom, name: prenom, widget: string}
               - {label: Nom de famille, name: nom, widget: string}
               - {label: Ville, name: ville, widget: string}
-              - {label: Département, name: departement, widget: number, valueType: "int"}
-              - {label: Liste, name: liste, widget: string}
-              - {label: Étiquette, name: etiquette, widget: string}
+              - label: "Département"
+                name: "departement"
+                widget: "relation"
+                collection: "departements"
+                searchFields: ["code", "nom"]
+                valueField: "code"
+                displayFields: ["code", "nom"]
+              - {label: Liste, name: liste, widget: string, required: false}
+              - {label: Étiquette, name: etiquette, widget: string, required: false}
+      - label: "Départements"
+        name: "departements"
+        file: "_data/departements.yaml"
+        fields:
+          - {label: ID, name: id, widget: number, valueType: int}
+          - {label: Code, name: code, widget: number, valueType: int}
+          - {label: Nom, name: nom, widget: string}
