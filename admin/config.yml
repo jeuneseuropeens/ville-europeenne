@@ -24,11 +24,14 @@ collections:
       - label: "Signataires de la charte"
         name: "signataires"
         file: "_data/signataires.yml"
-        widget: "list"
         fields:
-          - {label: Prénom, name: prenom, widget: string}
-          - {label: Nom de famille, name: nom, widget: string}
-          - {label: Ville, name: ville, widget: string}
-          - {label: Département, name: departement, widget: number, valueType: "int"}
-          - {label: Liste, name: liste, widget: string}
-          - {label: Étiquette, name: etiquette, widget: string}
+          - label: "Liste des signataires"
+            name: "signataires"
+            widget: "list"
+            fields:
+              - {label: Prénom, name: prenom, widget: string}
+              - {label: Nom de famille, name: nom, widget: string}
+              - {label: Ville, name: ville, widget: string}
+              - {label: Département, name: departement, widget: number, valueType: "int"}
+              - {label: Liste, name: liste, widget: string}
+              - {label: Étiquette, name: etiquette, widget: string}
