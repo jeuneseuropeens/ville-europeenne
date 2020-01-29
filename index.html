@@ -2,7 +2,7 @@
 title: Accueil
 ---
 <main class="px-3 px-md-5">
-    <section class="">
+    <section class="bg-white">
         <div class="row">
             <div class="col d-flex flex-column justify-content-center text-justify">
                 <h2 class="pb-4">Qu'est-ce que le {{ site.data.identity.name }} ?</h2>
@@ -44,7 +44,7 @@ title: Accueil
         </div>
     </section>
     <!-- 4 thèmes -->
-    <section>
+    <section class="bg-white">
         <h2>Les 4 grands thèmes du {{ site.data.identity.name }}</h2>
         <p class="my-4">
             Parler d'Europe peut se faire de multiples manières. Au sein du Label, quatre grandes catégories d'objectifs
@@ -96,44 +96,10 @@ title: Accueil
                 <img src="/assets/img/icon-Signature.png" alt="" class="img-fluid" width="200">
             </div>
         </div>
-
-
     </section>
 
-    <!--<section class="bg-white h-100">
-        <h2 class="mb-4">Ils se sont déjà engagés à respecter la charte !</h2>
-        {% assign signataires = site.data.signataires.signataires | group_by: "departement" | sort_natural: "departement" %}
-        {% for group in signataires %}
-
-        {% assign departement = site.data.departements | where: "code", group.name %}
-        {% for departement in departement %}
-        <h3 class="h4 mt-4 mb-2">{{ departement.nom }}</h3>
-        {% endfor %}
-
-        <div class="row">
-            {% assign signataires = group.items | sort_natural: "nom" %}
-            {% for signataire in signataires %}
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <div class="d-flex w-100 justify-content-between h5">
-                            <h5 class="mt-2">
-                                {{ signataire.prenom }} {{ signataire.nom }}
-                                <br>{% if signataire.etiquette or signataire.liste %}<span class="badge badge-light align-self-center">{% if signataire.etiquette %}{{ signataire.liste }}{% endif %} {% if signataire.etiquette %}{% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}{% endif %}</span>{% endif %}
-                            </h5>
-                        </div>
-                        <p><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i>{{ signataire.ville }}</p>                </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% endfor %}
-    </section>-->
-
-
-
     <section class="bg-white h-100">
-        <h2 class="mb-4">Ils se sont déjà engagés à respecter la charte !</h2>
+        <h2 class="mb-4">Ils ont déjà signé la charte !</h2>
 
         {% assign signataires_par_ville = site.data.signataires.signataires | sort_natural: "ville" | group_by: "ville" %}
         <div class="row">
