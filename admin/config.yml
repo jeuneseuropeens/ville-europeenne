@@ -14,5 +14,11 @@ collections:
         file: "_data/identity.yml"
         fields:
           - {label: "Titre", name: "name", widget: "string"}
-          - {label: "Logo", name: "logo", widget: "string"}
+          - label: "Logo"
+            name: "logo"
+            widget: "image"
+            default: "/assets/img/label-ville-europeenne-blanc.png"
+            media_library:
+              config:
+                multiple: true
           - {label: "Profil Twitter", name: "twitter", widget: "string"}
