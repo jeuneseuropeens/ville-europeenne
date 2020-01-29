@@ -51,10 +51,10 @@ collections:
         file: "_data/departements.yaml"
         fields:
           - label: "Départements"
-              label_singular: "Département"
-              name: "departements"
-              widget: "list"
-              fields:
-                - {label: ID, name: id, widget: number, valueType: int}
-                - {label: Code, name: code, widget: number, valueType: int}
-                - {label: Nom, name: nom, widget: string}
+            label_singular: "Département"
+            name: "departements"
+            widget: "list"
+            fields:
+              - {label: ID, name: id, widget: number, valueType: int}
+              - {label: Code, name: code, widget: number, valueType: int}
+              - {label: Nom, name: nom, widget: string}
