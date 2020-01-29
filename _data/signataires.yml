@@ -1,133 +1,113 @@
 signataires:
-  - prenom: Alexis
+  - departement: '91'
+    etiquette: LREM
     nom: Izard
+    prenom: Alexis
     ville: Savigny-sur-Orge
-    departement:
-    liste:
+  - departement: 44
     etiquette: LREM
-  - prenom: Valérie
-    nom: Oppelt
-    ville: Nantes
-    departement: 44
     liste: Nantes avec Vous
-    etiquette: LREM
-  - prenom: Julie
-    nom: Laernoes
+    nom: Oppelt
+    prenom: Valérie
     ville: Nantes
-    departement: 44
-    liste: Nantes Ensemble
+  - departement: 44
     etiquette: EELV
-  - prenom: Johanna
-    nom: Rolland
+    liste: Nantes Ensemble
+    nom: Laernoes
+    prenom: Julie
     ville: Nantes
-    departement: 44
+  - departement: 44
+    etiquette: PS
     liste: Nantes en Confiance
-    etiquette: PS
-  - prenom: Alain
+    nom: Rolland
+    prenom: Johanna
+    ville: Nantes
+  - departement: 67
+    etiquette: 'LREM, Modem, Agir'
     nom: Fontanel
+    prenom: Alain
     ville: Strasbourg
-    departement: 67
-    liste:
-    etiquette: LREM, Modem, Agir
-  - prenom: Mathieu
+  - departement: 67
+    etiquette: 'PS,'
     nom: Cahn
+    prenom: Mathieu
     ville: Strasbourg
-    departement: 67
-    liste:
-    etiquette: PS,
-  - prenom: Jeanne
+  - departement: 67
+    etiquette: 'EELV, GE'
     nom: Barseghian
+    prenom: Jeanne
     ville: Strasbourg
-    departement: 67
-    liste:
-    etiquette: EELV, GE
-  - prenom: Martine
+  - departement: 59
+    etiquette: PS
     nom: Aubry
+    prenom: Martine
     ville: Lille
-    departement: 59
-    liste:
-    etiquette: PS
-  - prenom: Victor
+  - departement: 28
     nom: Provost
+    prenom: Victor
     ville: Thiron-Gardais
-    departement: 28
-    liste:
-    etiquette:
-  - prenom: Pascal
+  - departement: 10
     nom: Landréat
+    prenom: Pascal
     ville: Pont Sainte-Marie
-    departement: 10
-    liste:
-    etiquette:
-  - prenom: Nicolas
-    nom: Mayer-Rossignol
-    ville: Rouen
-    departement: 76
+  - departement: 76
     liste: FiersdeRouen
-    etiquette:
-  - prenom: Baptiste
-    nom: Chapuis
-    ville: Orléans
-    departement: 45
-    liste: Faire respirer Orléans
+    nom: Mayer-Rossignol
+    prenom: Nicolas
+    ville: Rouen
+  - departement: 45
     etiquette: PS
-  - prenom: Tristan
+    liste: Faire respirer Orléans
+    nom: Chapuis
+    prenom: Baptiste
+    ville: Orléans
+  - departement: 57
     nom: Atmania
+    prenom: Tristan
     ville: Saint-Avold
-    departement: 57
-    liste:
-    etiquette:
-  - prenom: Frédéric
+  - departement: 62
     nom: Leturque
+    prenom: Frédéric
     ville: Arras
-    departement: 62
-    liste:
-    etiquette:
-  - prenom: Martial
+  - departement: 85
     nom: Caillaud
+    prenom: Martial
     ville: Les Achards
-    departement: 85
-    liste:
-    etiquette:
-  - prenom: Béatrice
-    nom: Agamennone
-    ville: Metz
-    departement: 57
+  - departement: 57
     liste: Energies pour Metz
-    etiquette:
-  - prenom: François-Xavier
+    nom: Agamennone
+    prenom: Béatrice
+    ville: Metz
+  - departement: 27
     nom: Priollaud
+    prenom: François-Xavier
     ville: Louviers
-    departement: 27
-    liste:
-    etiquette:
-  - prenom: Violette
-    nom: Spillebout
-    ville: Lille
-    departement: 59
+  - departement: 59
+    etiquette: LREM
     liste: Faire respirer Lille
-    etiquette: LREM
-  - prenom: Younes
+    nom: Spillebout
+    prenom: Violette
+    ville: Lille
+  - departement: 17
+    liste: 'Surgères pour tous, Ensemble, Construisons l''avenir'
     nom: Biar
+    prenom: Younes
     ville: Surgères
-    departement: 17
-    liste: Surgères pour tous, Ensemble, Construisons l'avenir
-    etiquette:
-  - prenom: Laurent
+  - departement: 31
+    etiquette: LREM
+    liste: 'Tournefeuille audacieuse, inventive, solidaire'
     nom: Soulié
+    prenom: Laurent
     ville: Tournefeuille
-    departement: 31
-    liste:  Tournefeuille audacieuse, inventive, solidaire
-    etiquette: LREM
-  - prenom: Chems
-    nom: Sallah
-    ville: Grasse
-    departement: 06
-    liste: Grasse ensemble
+  - departement: 6
     etiquette: Agir
-  - prenom: Florence
-    nom: Noirot
-    ville: Gif-sur-Yvette
-    departement: 91
-    liste: Gif Territoire d'Avenirs
+    liste: Grasse ensemble
+    nom: Sallah
+    prenom: Chems
+    ville: Grasse
+  - departement: 91
     etiquette: LREM
+    liste: Gif Territoire d'Avenirs
+    nom: Noirot
+    prenom: Florence
+    ville: Gif-sur-Yvette
