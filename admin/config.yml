@@ -1,10 +1,18 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
 media_folder: 'assets/uploads'
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: '_posts/'
-    fields:
-      - { name: Title }
+  - name: "config"
+    label: "Config"
+    editor:
+      preview: false
+    files:
+      - label: "Identité du site"
+        name: "identity"
+        file: "_data/identity.yml"
+        fields:
+          - {label: "Titre", name: "name", widget: "string"}
+          - {label: "Logo", name: "logo", widget: "string"}
+          - {label: "Profil Twitter", name: "twitter", widget: "string"}
