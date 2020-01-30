@@ -4,3 +4,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "admin"
+    values:
+      sitemap: false
+plugins:
+  - jekyll-sitemap
