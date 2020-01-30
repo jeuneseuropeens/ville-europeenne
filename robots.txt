@@ -1,6 +1,4 @@
-Sitemap: http://www.ville-europeenne.org
+Sitemap: http://www.ville-europeenne.org/sitemap.xml
 
 User-agent: *
-Disallow: /assets
-Allow: /assets/img
-Allow: /assets/uploads
+Disallow: /admin
