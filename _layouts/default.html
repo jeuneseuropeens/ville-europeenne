@@ -1,18 +1,45 @@
 <!doctype html>
 <html lang="fr">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>{{ page.title }} - {{ site.data.identity.name }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{%if page.title %}{{ page.title }} - {{ site.data.identity.title }}{% else %}{{ site.data.identity.title }}{% endif %}</title>
+    <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.data.identity.description | truncate: 160 }}{% endif %}" />
     <link rel="stylesheet" href="/assets/css/styles.css">
-
-    <!-- External resources (icons, fonts) -->
+    <!--Open Graph tags-->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.data.identity.title }}{% else %}{{ site.data.identity.title }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <!--<meta property="og:image" content="{{ site.url }}/thumbs/{{ page.image }}" />-->
+    <meta property="og:site_name" content="{{ site.data.identity.title }}">
+    <meta property="article:author" content="{{ site.data.identity.facebook }}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.identity.description }}{% endif %}">
+    <!--Twitter Card-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@VilleEuropeenne" />
+    <meta name="twitter:creator" content="@VilleEuropeenne" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="twitter:title" content="{%if page.title %}{{ page.title }} - {{ site.data.identity.title }}{% else %}{{ site.data.identity.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.identity.description }}{% endif %}">
+    <!--<meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />-->
+    <!--Feather icons-->
     <script src="https://unpkg.com/feather-icons"></script>
-
-    <!-- Netlify Identity -->
+    <!--Netlify CMS-->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!--Favicons-->
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon-180x180.png" />
 </head>
 <body>
     {% include header.html %}

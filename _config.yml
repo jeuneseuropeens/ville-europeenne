@@ -1,5 +1,4 @@
 collections_dir: collections
-
 defaults:
   - scope:
       path: ""

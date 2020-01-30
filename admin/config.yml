@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow
 media_folder: 'assets/uploads'
 site_url: https://www.ville-europeenne.org
 display_url: https://www.ville-europeenne.org
@@ -17,14 +16,17 @@ collections:
         name: "identity"
         file: "_data/identity.yml"
         fields:
-          - {label: "Titre", name: "name", widget: "string"}
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Description (maximum 160 caractères pour un affichage optimal)", name: "description", widget: "text"}
 #          - label: "Logo"
 #            name: "logo"
 #            widget: "image"
 #            media_library:
 #              config:
 #                multiple: false
+          - {label: "Profil Facebook", name: "facebook", widget: "string"}
           - {label: "Profil Twitter", name: "twitter", widget: "string"}
+
       - label: "Signataires de la charte"
         name: "signataires"
         file: "_data/signataires.yml"
