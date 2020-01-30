@@ -116,3 +116,8 @@ signataires:
     nom: Vetter
     prenom: Jean-Philippe
     ville: Strasbourg
+  - departement: '37'
+    liste: 'Richelieu ensemble '
+    nom: Naudeau
+    prenom: Philippe
+    ville: Richelieu
