@@ -111,3 +111,8 @@ signataires:
     nom: Noirot
     prenom: Florence
     ville: Gif-sur-Yvette
+  - departement: '67'
+    etiquette: LR
+    nom: Vetter
+    prenom: Jean-Philippe
+    ville: Strasbourg
