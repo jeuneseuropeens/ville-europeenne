@@ -150,7 +150,14 @@ signataires:
     prenom: Philippe
     ville: Pins-Justaret
   - departement: '14'
+    etiquette: ''
     liste: Trouville c'est vous !
     nom: Chavagné
     prenom: Delphine
     ville: Trouville-sur-Mer
+  - departement: '54'
+    etiquette: MR
+    liste: Nancy positive
+    nom: Hénart
+    prenom: Laurent
+    ville: Nancy
