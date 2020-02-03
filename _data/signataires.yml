@@ -143,3 +143,9 @@ signataires:
     nom: Baly
     prenom: Stéphane
     ville: Lille
+  - departement: '31'
+    etiquette: LREM
+    liste: Pins-Justaret demain
+    nom: Guerriot
+    prenom: Philippe
+    ville: Pins-Justaret
