@@ -121,3 +121,25 @@ signataires:
     nom: Naudeau
     prenom: Philippe
     ville: Richelieu
+  - departement: '76'
+    liste: Inventons Sotteville
+    nom: Eastabrook
+    prenom: Jean
+    ville: Sotteville-Lès-Rouen
+  - departement: '76'
+    liste: 'Rassemblée, Sotteville avance !'
+    nom: Pane
+    prenom: Luce
+    ville: Sotteville-Lès-Rouen
+  - departement: '63'
+    etiquette: Gauche plurielle
+    liste: Chamalières vers demain
+    nom: Merzi
+    prenom: Thomas
+    ville: Chamalières
+  - departement: '59'
+    etiquette: EELV
+    liste: Lille Verte 2020
+    nom: Baly
+    prenom: Stéphane
+    ville: Lille
