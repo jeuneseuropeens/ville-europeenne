@@ -161,3 +161,9 @@ signataires:
     nom: Hénart
     prenom: Laurent
     ville: Nancy
+  - departement: '29'
+    etiquette: EELV
+    liste: Brest Écologie Solidarités
+    nom: Pichon
+    prenom: Ronan
+    ville: Brest
