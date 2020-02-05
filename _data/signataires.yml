@@ -167,3 +167,13 @@ signataires:
     nom: Pichon
     prenom: Ronan
     ville: Brest
+  - departement: '37'
+    nom: Bouchet
+    prenom: Christophe
+    ville: Tours
+  - departement: '35'
+    etiquette: Pour Rennes
+    liste: PS
+    nom: Appéré
+    prenom: Nathalie
+    ville: Rennes
