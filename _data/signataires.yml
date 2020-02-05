@@ -172,8 +172,8 @@ signataires:
     prenom: Christophe
     ville: Tours
   - departement: '35'
-    etiquette: Pour Rennes
-    liste: PS
+    etiquette: PS
+    liste: Pour Rennes
     nom: Appéré
     prenom: Nathalie
     ville: Rennes
