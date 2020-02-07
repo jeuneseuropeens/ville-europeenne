@@ -177,3 +177,22 @@ signataires:
     nom: Appéré
     prenom: Nathalie
     ville: Rennes
+  - departement: '76'
+    nom: Louvel
+    prenom: Jean-Louis
+    ville: Rouen
+  - departement: '54'
+    liste: Oui Vandoeuvre
+    nom: Renaud
+    prenom: Dominique
+    ville: Vandoeuvre-Lès-Nancy
+  - departement: '63'
+    liste: 'Un avenir à partager, Aubière ville durable et solidaire'
+    nom: Guitton
+    prenom: Florent
+    ville: Aubière
+  - departement: '45'
+    liste: 'Ingré 2020, Partageons l''avenir'
+    nom: Dumas
+    prenom: Christian
+    ville: Ingré
