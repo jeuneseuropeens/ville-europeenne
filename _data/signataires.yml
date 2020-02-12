@@ -205,3 +205,14 @@ signataires:
     nom: Butterbach
     prenom: Denis
     ville: Valmunster
+  - departement: '76'
+    liste: Ensemble pour Rouen
+    nom: Caron
+    prenom: Marine
+    ville: Rouen
+  - departement: '75'
+    etiquette: Volt
+    liste: 'Volt Paris, un Paris pour l''Europe'
+    nom: Conti
+    prenom: Fabiola
+    ville: Paris IX
