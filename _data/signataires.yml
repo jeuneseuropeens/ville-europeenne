@@ -33,7 +33,8 @@ signataires:
     prenom: Mathieu
     ville: Strasbourg
   - departement: 67
-    etiquette: 'EELV, GE'
+    etiquette: ''
+    liste: Strasbourg écologiste et citoyenne
     nom: Barseghian
     prenom: Jeanne
     ville: Strasbourg
@@ -168,6 +169,7 @@ signataires:
     prenom: Ronan
     ville: Brest
   - departement: '37'
+    liste: Tours nous rassemble
     nom: Bouchet
     prenom: Christophe
     ville: Tours
