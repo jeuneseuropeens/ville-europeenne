@@ -7,26 +7,43 @@ display_url: https://www.ville-europeenne.org
 logo_url: https://www.ville-europeenne.org/assets/img/label-ville-europeenne.png
 show_preview_links: false
 collections:
+  - name: 'signataires'
+    label: 'Signataires de la charte'
+    folder: 'collections/_signataires/'
+    create: true
+    slug: '{{departement}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Département', name: 'departement', widget: 'string' }
+      - { label: 'Nom de la commune', name: 'title', widget: 'string' }
+      - label: "Candidats"
+        name: "candidats"
+        widget: "list"
+        fields:
+          - {label: "Nom", name: "nom", widget: "string"}
+          - {label: "Prénom", name: "prenom", widget: "string"}
+          - {label: "Étiquette", name: "etiquette", widget: "string"}
+          - {label: "Liste", name: "liste", widget: "string"}
   - name: "config"
     label: "Configuration"
     editor:
       preview: false
     files:
-      - label: "Identité du site"
-        name: "identity"
-        file: "_data/identity.yml"
-        fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - {label: "Description (maximum 160 caractères pour un affichage optimal)", name: "description", widget: "text"}
-#          - label: "Logo"
-#            name: "logo"
-#            widget: "image"
-#            media_library:
-#              config:
-#                multiple: false
-          - {label: "Profil Facebook", name: "facebook", widget: "string"}
-          - {label: "Profil Twitter", name: "twitter", widget: "string"}
-
+#      - label: "Identité du site"
+#        name: "identity"
+#        file: "_data/identity.yml"
+#        fields:
+#          - {label: "Titre", name: "title", widget: "string"}
+#          - {label: "Description (maximum 160 caractères pour un affichage optimal)", name: "description", widget: "text"}
+##          - label: "Logo"
+##            name: "logo"
+##            widget: "image"
+##            media_library:
+##              config:
+##                multiple: false
+#          - {label: "Profil Facebook", name: "facebook", widget: "string"}
+#          - {label: "Profil Twitter", name: "twitter", widget: "string"}
       - label: "Signataires de la charte"
         name: "signataires"
         file: "_data/signataires.yml"

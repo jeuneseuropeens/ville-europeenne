@@ -2,30 +2,26 @@ body {
   font-family: "Proxima Nova", $font-family-sans-serif;
 }
 
-header {
+#header_homepage {
   position: relative;
   z-index: -10;
   background: theme-color("blue") url("../../assets/img/waldemar-brandt-wRAHbIziQfg-unsplash.jpeg") no-repeat fixed center;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 76px);
   width: 100vw;
-  //transition: font-size 2s, transform 2s;
-
-  /*&::after {
-    content: "SCROLL";
-    color: white;
-    font-weight: 600;
-    font-size: 1.2em;
-
-    display: flex;
-    width: 100vw;
-    height: 10vh;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-  }*/
 }
+
+@include media-breakpoint-down(xs) {
+  #header_homepage {
+    background-size: auto 60vh;
+    background-position: top -10vh center;
+    height: 50vh;
+    img {
+      display: none;
+    }
+  }
+}
+
 
 main {
   position: relative;

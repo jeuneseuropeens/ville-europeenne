@@ -1,0 +1,52 @@
+---
+---
+{% assign nombre_villes = 0 %}{% assign nombre_candidats = 0 %}
+{% for ville in site.signataires %}
+    {% capture nombre_villes %}{{ nombre_villes | plus: 1 }}{% endcapture %}
+    {% for candidat in ville.candidats %}
+        {% capture nombre_candidats %}{{ nombre_candidats | plus: 1 }}{% endcapture %}
+    {% endfor %}
+{% endfor %}
+<main class="px-3 px-md-5">
+    <section class="bg-white h-100">
+        <h2 class="mb-4">Ils et elles ont signé la charte</h2>
+        <p class="lead">Déjà {{ nombre_candidats }} candidat(e)s dans {{ nombre_villes }} communes ont signé la charte du {{ site.data.identity.title }} !</p>
+        <div class="row">
+            {% for ville in site.signataires %}
+            <div class="col-12 col-lg-6">
+                <h3 class="h5 mt-4 mb-2 d-flex align-items-baseline"><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin" style="height: 1.2rem;width: 1.2rem;"></i>{{ ville.title }}&nbsp;<small>{{ ville.departement }}</small></h3>
+                <ul class="list-group">
+
+                    {% for candidat in ville.candidats %}
+                    <li class="list-group-item list-group-item-action">
+                        <div class="d-flex w-100 justify-content-between">
+                            <p class="m-0">
+                                {{ candidat.prenom }} {{ candidat.nom }}
+                                {% if candidat.etiquette or candidat.liste %}
+                                    <span class="badge badge-light align-self-center">
+                                        {% if candidat.liste %}
+                                            {{ candidat.liste }}
+                                        {% endif %}
+                                        {% if candidat.etiquette %}
+                                            {% if candidat.liste %}({% endif %}{{ candidat.etiquette }}{% if candidat.liste %}){% endif %}
+                                        {% endif %}
+                                    </span>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+
+
+
+
+    </section>
+
+</main>

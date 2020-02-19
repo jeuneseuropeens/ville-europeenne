@@ -1,5 +1,8 @@
-collections_dir: collections
 url: https://www.ville-europeenne.org
+collections_dir: collections
+collections:
+  signataires:
+    sort_by: ville
 defaults:
   - scope:
       path: ""

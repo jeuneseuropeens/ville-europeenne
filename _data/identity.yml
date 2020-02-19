@@ -1,6 +1,13 @@
 title: Label Ville Européenne
 description: >
   À l'occasion des élections municipales 2020 et au-delà, un label 100% citoyen et transpartisan qui récompense les communes pour leur engagement européen.
-logo: /assets/img/label-ville-europeenne-blanc.png
+logo:
+  light: /assets/img/label-ville-europeenne-blanc.png
+  dark: /assets/img/label-ville-europeenne.png
 twitter: 'https://twitter.com/VilleEuropeenne'
 facebook: 'https://www.facebook.com/JeunesEuropeens/'
+navigation:
+  - name: Les signataires
+    link: /signataires.html
+  - name: Espace presse
+    link: /espace-presse.html
