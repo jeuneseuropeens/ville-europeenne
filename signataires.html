@@ -1,15 +1,9 @@
 ---
 ---
-{% assign nombre_villes = 0 %}{% assign nombre_candidats = 0 %}
-{% for ville in site.signataires %}
-    {% capture nombre_villes %}{{ nombre_villes | plus: 1 }}{% endcapture %}
-    {% for candidat in ville.candidats %}
-        {% capture nombre_candidats %}{{ nombre_candidats | plus: 1 }}{% endcapture %}
-    {% endfor %}
-{% endfor %}
 <main class="px-3 px-md-5">
     <section class="bg-white h-100">
         <h2 class="mb-4">Ils et elles ont signé la charte</h2>
+        {% assign nombre_villes = 0 %}{% assign nombre_candidats = 0 %}{% for ville in site.signataires %}{% capture nombre_villes %}{{ nombre_villes | plus: 1 }}{% endcapture %}{% for candidat in ville.candidats %}{% capture nombre_candidats %}{{ nombre_candidats | plus: 1 }}{% endcapture %}{% endfor %}{% endfor %}
         <p class="lead">Déjà {{ nombre_candidats }} candidat(e)s dans {{ nombre_villes }} communes ont signé la charte du {{ site.data.identity.title }} !</p>
         <div class="row">
             {% assign villes = site.signataires | sort_natural %}
@@ -20,21 +14,12 @@
 
                     {% for candidat in ville.candidats %}
                     <li class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between">
-                            <p class="m-0">
-                                {{ candidat.prenom }} {{ candidat.nom }}
-                                {% if candidat.etiquette or candidat.liste %}
-                                    <span class="badge badge-light align-self-center">
-                                        {% if candidat.liste and candidat.liste != "" %}
-                                            {{ candidat.liste }}
-                                        {% endif %}
-                                        {% if candidat.etiquette and candidat.etiquette != "" %}
-                                            {% if candidat.liste and candidat.liste != "" %}({% endif %}{{ candidat.etiquette }}{% if candidat.liste and candidat.liste != "" %}){% endif %}
-                                        {% endif %}
-                                    </span>
-                                {% endif %}
-                            </p>
-                        </div>
+                        <h5 class="card-title">{{ candidat.prenom }} {{ candidat.nom }}</h5>
+                        {% if candidat.etiquette or candidat.liste %}
+                            <h6 class="card-subtitle mb-2 text-muted font-italic pb-0">{% if candidat.liste and candidat.liste != "" %}{{ candidat.liste }}{% endif %}{% if candidat.etiquette and candidat.etiquette != "" %}{% if candidat.liste and candidat.liste != "" %}{{ " - " }}{% endif %}{{ candidat.etiquette }}{% endif %}</h6>
+                        {% endif %}
+
+
                     </li>
                     {% endfor %}
                 </ul>

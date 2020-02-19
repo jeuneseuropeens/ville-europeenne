@@ -98,48 +98,15 @@
     </section>
 
     <section class="bg-white h-100">
-
-        <h2 class="mb-4">Ils ont déjà signé la charte !</h2>
-
-        {% assign signataires_par_ville = site.data.signataires.signataires | sort_natural: "ville" | group_by: "ville" %}
-        <div class="row">
-            {% for group in signataires_par_ville %}
-            <div class="col-12 col-lg-6">
-                <ul class="list-group">
-                    {% assign signataires = group.items | sort_natural: "nom" %}
-
-                    {% for signataire in signataires %}
-                        {% capture ville %}{{signataire.ville}}&nbsp;<small>{{ signataire.departement }}</small>{% endcapture %}
-                    {% endfor %}
-
-
-                    <h3 class="h4 mt-4 mb-2 d-flex align-items-baseline"><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin"></i> {{ ville }}</h3>
-
-                    {% for signataire in signataires %}
-                    <li class="list-group-item list-group-item-action">
-                        <div class="d-flex w-100 justify-content-between h5">
-                            <h5 class="mt-2 m-0">
-                                {{ signataire.prenom }} {{ signataire.nom }}
-                                {% if signataire.etiquette or signataire.liste %}
-                                    <span class="badge badge-light align-self-center">
-                                        {% if signataire.etiquette %}
-                                            {{ signataire.liste }}
-                                        {% endif %}
-                                        {% if signataire.etiquette %}
-                                            {% if signataire.liste %}({% endif %}{{ signataire.etiquette }}{% if signataire.liste %}){% endif %}
-                                        {% endif %}
-                                    </span>
-                                {% endif %}
-                            </h5>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!--{% capture divider %}<div class="w-100"></div>{% endcapture %}{% cycle "", divider %}-->
-
-            {% endfor %}
-        </div>
+        {% assign nombre_villes = 0 %}{% assign nombre_candidats = 0 %}{% for ville in site.signataires %}{% capture nombre_villes %}{{ nombre_villes | plus: 1 }}{% endcapture %}{% for candidat in ville.candidats %}{% capture nombre_candidats %}{{ nombre_candidats | plus: 1 }}{% endcapture %}{% endfor %}{% endfor %}
+        <h2 class="mb-4">Déjà {{ nombre_candidats }} candidat(e)s dans {{ nombre_villes }} communes ont signé la charte</h2>
+        <p>À Lille, Strasbourg, Tournefeuille, Chambéry, et bien d'autres : ils et elles se sont engagés dans le cadre du {{ site.data.identity.title }} !</p>
+        <p class="d-flex">
+            <a class="btn btn-blue btn-lg ml-auto media" href="/signataires.html">
+                <span class="media-body">La liste complète des signataires</span>
+                <i class="feather-icons-nav align-self-center ml-2" data-feather="arrow-right-circle"></i>
+            </a>
+        </p>
     </section>
 
 </main>
