@@ -23,8 +23,8 @@ collections:
         fields:
           - {label: "Nom", name: "nom", widget: "string"}
           - {label: "Prénom", name: "prenom", widget: "string"}
-          - {label: "Étiquette", name: "etiquette", widget: "string"}
-          - {label: "Liste", name: "liste", widget: "string"}
+          - {label: "Étiquette", name: "etiquette", widget: "string", required: false}
+          - {label: "Liste", name: "liste", widget: "string", required: false}
   - name: "config"
     label: "Configuration"
     editor:
