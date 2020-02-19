@@ -25,11 +25,11 @@
                                 {{ candidat.prenom }} {{ candidat.nom }}
                                 {% if candidat.etiquette or candidat.liste %}
                                     <span class="badge badge-light align-self-center">
-                                        {% if candidat.liste %}
+                                        {% if candidat.liste and candidat.liste != "" %}
                                             {{ candidat.liste }}
                                         {% endif %}
-                                        {% if candidat.etiquette %}
-                                            {% if candidat.liste %}({% endif %}{{ candidat.etiquette }}{% if candidat.liste %}){% endif %}
+                                        {% if candidat.etiquette and candidat.etiquette != "" %}
+                                            {% if candidat.liste and candidat.liste != "" %}({% endif %}{{ candidat.etiquette }}{% if candidat.liste and candidat.liste != "" %}){% endif %}
                                         {% endif %}
                                     </span>
                                 {% endif %}
