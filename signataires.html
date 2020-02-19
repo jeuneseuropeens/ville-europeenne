@@ -12,7 +12,8 @@
         <h2 class="mb-4">Ils et elles ont signé la charte</h2>
         <p class="lead">Déjà {{ nombre_candidats }} candidat(e)s dans {{ nombre_villes }} communes ont signé la charte du {{ site.data.identity.title }} !</p>
         <div class="row">
-            {% for ville in site.signataires %}
+            {% assign villes = site.signataires | sort_natural %}
+            {% for ville in villes %}
             <div class="col-12 col-lg-6">
                 <h3 class="h5 mt-4 mb-2 d-flex align-items-baseline"><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin" style="height: 1.2rem;width: 1.2rem;"></i>{{ ville.title }}&nbsp;<small>{{ ville.departement }}</small></h3>
                 <ul class="list-group">
