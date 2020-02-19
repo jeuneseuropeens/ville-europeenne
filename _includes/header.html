@@ -1,9 +1,44 @@
-<header class="overflow-hidden">
-    <div class="container-fluid px-lg-0 position-fixed">
-        <div class="container-lg px-0">
-            <div class="d-flex flex-column flex-md- align-items-center pt-3 pt-md-5 pb-3">
-                <h1><img src="{{ site.data.identity.logo }}" alt="{{ site.data.identity.name }}" width="500" class="img-fluid"></h1>
+{% if page.name == "index.html" %}
+    <div class="overflow-hidden" id="header_homepage">
+        <div class="container-fluid px-lg-0 position-fixed">
+            <div class="container-lg px-0">
+                <div class="d-flex flex-column flex-md- align-items-center pt-3 pt-md-5 pb-3">
+                    <h1 class="text-center"><img src="{{ site.data.identity.logo.light }}" alt="{{ site.data.identity.name }}" width="500" class="img-fluid"></h1>
+                </div>
             </div>
+        </div>
+    </div>
+{% endif %}
+
+<header class="bg-light sticky-top" id="top">
+    <div class="container-fluid px-lg-0">
+        <div class="container-lg px-0">
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <a class="navbar-brand" href="{{ site.url }}">
+                    <img src="{{ site.data.identity.logo.dark }}" height="50" class="d-inline-block align-top" alt="{{ site.data.identity.title }}">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ site.url }}#top">Accueil</a>
+                        </li>
+                        {% for item in site.data.identity.navigation %}
+
+                        <li class="nav-item{% if page.url == item.link %} active{% endif %}">
+                            <a class="nav-link" href="{{ item.link }}">{{ item.name }}{% if page.name == item.name %}<span class="sr-only">(page actuelle)</span>{% endif %}</a>
+                        </li>
+                        {% endfor %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ site.data.identity.twitter }}">
+                                <i class="feather-icons-nav align-self-center" data-feather="twitter" stroke="none" fill="#1DA1F2">Nous suivre sur Twitter</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </div>
 </header>

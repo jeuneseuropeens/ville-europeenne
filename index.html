@@ -98,6 +98,7 @@
     </section>
 
     <section class="bg-white h-100">
+
         <h2 class="mb-4">Ils ont déjà signé la charte !</h2>
 
         {% assign signataires_par_ville = site.data.signataires.signataires | sort_natural: "ville" | group_by: "ville" %}

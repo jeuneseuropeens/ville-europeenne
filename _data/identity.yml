@@ -9,5 +9,5 @@ facebook: 'https://www.facebook.com/JeunesEuropeens/'
 navigation:
   - name: Les signataires
     link: /signataires.html
-  - name: Espace presse
-    link: /espace-presse.html
+#  - name: Espace presse
+#    link: /espace-presse.html
