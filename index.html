@@ -4,10 +4,8 @@
     <section class="bg-white">
         <div class="row">
             <div class="col d-flex flex-column justify-content-center text-justify">
-                <h2 class="pb-4">Qu'est-ce que le {{ site.data.identity.title }} ?</h2>
-                <p>
-                    C'est un label qui <strong>récompense les communes pour leur engagement européen</strong>, en les incitant à mettre en place des actions symboliques et pratiques pour leurs citoyens.
-                </p>
+                <h2 class="pb-4">Qu'est-ce que le {{ site.data.identity.title }}&nbsp;?</h2>
+                <p class="lead">À l'occasion des élections municipales 2020 et au-delà, le {{ site.data.identity.title }}, 100% citoyen et transpartisan, <strong>récompense les communes pour leur engagement européen</strong> en les incitant à mettre en place des actions symboliques et pratiques pour leurs citoyens..</p>
                 <p>
                     Il comprend cinq niveaux qui <strong>permettent aux citoyens de voir en un coup d'oeil les réalisations européennes dans leur commune</strong> et reflètent l'engagement européen d'une municipalité.
                 </p>
@@ -28,7 +26,7 @@
                 <img src="/assets/img/icon.png" alt="" class="img-fluid" width="200">
             </div> -->
             <div class="col d-flex flex-column justify-content-center text-justify">
-                <h2 class="pb-4">Pourquoi ce label ?</h2>
+                <h2 class="pb-4">Pourquoi ce label&nbsp;?</h2>
                 <p>
                     <strong>Faire vivre l'Europe dans nos villes et villages</strong>, voilà l'objectif de ce Label Ville Européenne.
                 </p>
@@ -51,10 +49,10 @@
         </p>
         <ul class="list-unstyled row text-white text-center h5 my-4 mb-0">
             {% for theme in site.data.index.themes %}
-            <li class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0">
-                <div class="bg-{{ theme.bg-color }} p-3 d-flex flex-column align-items-center">
-                    {{ theme.title | upcase }}
-                    <img src="{{ theme.img-src }}" class="img-fluid icon-antoine my-3" alt="">
+            <li class="col-md-6 col-lg-3 mb-4">
+                <div class="bg-{{ theme.bg-color }} p-3 d-flex flex-row flex-lg-column-reverse align-items-center">
+                    <div class="icon-antoine mr-3 mr-lg-0 my-lg-3"><img src="{{ theme.img-src }}" class="img-fluid d-block" alt=""></div>
+                    <div class="text-center w-100">{{ theme.title | upcase }}</div>
                 </div>
             </li>
             {% endfor %}
@@ -78,7 +76,7 @@
     <section class="bg-blue text-white">
         <div class="row">
             <div class="col d-flex flex-column justify-content-center">
-                <h2 class="pb-4">Qui peut signer la charte du {{ site.data.identity.title }} ?</h2>
+                <h2 class="pb-4">Qui peut signer la charte du {{ site.data.identity.title }}&nbsp;?</h2>
                 <p class="text-justify">
                     Nous invitons les <strong>têtes de liste aux élections municipales</strong> à signer la charte Ville Européenne.
                 </p>
@@ -92,7 +90,7 @@
                 </a>
             </div>
             <div class="col d-none d-md-block col-auto">
-                <img src="/assets/img/icon-Signature.png" alt="" class="img-fluid" width="200">
+                <img src="/assets/img/icon-Signature.png" alt="" class="img-fluid" width="128">
             </div>
         </div>
     </section>
@@ -100,7 +98,7 @@
     <section class="bg-white h-100">
         {% assign nombre_villes = 0 %}{% assign nombre_candidats = 0 %}{% for ville in site.signataires %}{% capture nombre_villes %}{{ nombre_villes | plus: 1 }}{% endcapture %}{% for candidat in ville.candidats %}{% capture nombre_candidats %}{{ nombre_candidats | plus: 1 }}{% endcapture %}{% endfor %}{% endfor %}
         <h2 class="mb-4">Déjà {{ nombre_candidats }} candidat(e)s dans {{ nombre_villes }} communes ont signé la charte</h2>
-        <p>À Lille, Strasbourg, Tournefeuille, Chambéry, et bien d'autres : ils et elles se sont engagés dans le cadre du {{ site.data.identity.title }} !</p>
+        <p>À Lille, Strasbourg, Tournefeuille, Chambéry, et bien d'autres&nbsp;: ils et elles se sont engagés dans le cadre du {{ site.data.identity.title }}&nbsp;!</p>
         <p class="d-flex">
             <a class="btn btn-blue btn-lg ml-auto media" href="/signataires.html">
                 <span class="media-body">La liste complète des signataires</span>

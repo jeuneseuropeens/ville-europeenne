@@ -1,5 +1,10 @@
 body {
   font-family: "Proxima Nova", $font-family-sans-serif;
+  font-weight: $font-weight-light;
+}
+strong {
+  font-weight: $font-weight-bold;
+
 }
 
 #header_homepage {
@@ -36,9 +41,18 @@ section {
   //min-height: 300px;
 }
 
+.square {
+  //width: 40vw;
+  height: 40vw;
+}
+@include media-breakpoint-up(md) {
+
+}
+
+$icon-antoine-size-sm: 64px;
 .icon-antoine {
-  height: 150px;
-  width: 150px;
+  max-height: $icon-antoine-size-sm;
+  width: $icon-antoine-size-sm;
 }
 
 /*

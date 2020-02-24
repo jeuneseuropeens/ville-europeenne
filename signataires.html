@@ -8,31 +8,21 @@
         <div class="row">
             {% assign villes = site.signataires | sort_natural %}
             {% for ville in villes %}
-            <div class="col-12 col-lg-6">
-                <h3 class="h5 mt-4 mb-2 d-flex align-items-baseline"><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin" style="height: 1.2rem;width: 1.2rem;"></i>{{ ville.title }}&nbsp;<small>{{ ville.departement }}</small></h3>
-                <ul class="list-group">
-
-                    {% for candidat in ville.candidats %}
-                    <li class="list-group-item list-group-item-action">
-                        <h5 class="card-title">{{ candidat.prenom }} {{ candidat.nom }}</h5>
-                        {% if candidat.etiquette or candidat.liste %}
-                            <h6 class="card-subtitle mb-2 text-muted font-italic pb-0">{% if candidat.liste and candidat.liste != "" %}{{ candidat.liste }}{% endif %}{% if candidat.etiquette and candidat.etiquette != "" %}{% if candidat.liste and candidat.liste != "" %}{{ " - " }}{% endif %}{{ candidat.etiquette }}{% endif %}</h6>
-                        {% endif %}
-
-
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+                {% capture nom_departement %}{% for departement in site.data.departements %}{% if departement.code == ville.departement %}{{ departement.nom }}{% endif %}{% endfor %}{% endcapture %}
+                <div class="col-12 col-lg-6">
+                    <h3 class="h5 mt-4 mb-2 d-flex align-items-baseline"><i class="feather-icons-nav align-self-center mr-2" data-feather="map-pin" style="height: 1.2rem;width: 1.2rem;"></i>{{ ville.title }}&nbsp;<small>- {{ nom_departement }}</small></h3>
+                    <ul class="list-group">
+                        {% for candidat in ville.candidats %}
+                        <li class="list-group-item list-group-item-action">
+                            <h5 class="card-title mb-1">{{ candidat.prenom }} {{ candidat.nom }}</h5>
+                            {% if candidat.etiquette or candidat.liste %}
+                                <h6 class="card-subtitle mt-2 mb-1 text-muted font-italic pb-0">{% if candidat.liste and candidat.liste != "" %}{{ candidat.liste }}{% endif %}{% if candidat.etiquette and candidat.etiquette != "" %}{% if candidat.liste and candidat.liste != "" %}{{ " - " }}{% endif %}{{ candidat.etiquette }}{% endif %}</h6>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             {% endfor %}
         </div>
-
-
-
-
-
-
-
     </section>
-
 </main>
