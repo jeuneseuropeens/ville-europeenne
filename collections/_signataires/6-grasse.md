@@ -1,5 +1,5 @@
 ---
-departement: '6'
+departement: '06'
 title: Grasse
 candidats:
   - liste: Grasse ensemble
