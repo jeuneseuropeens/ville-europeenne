@@ -1,17 +1,18 @@
 ---
 departement: '67'
-title: 'Strasbourg'
+title: Strasbourg
 candidats:
-    - nom: Fontanel
-      prenom: Alain 
-      etiquette: 'LREM, Modem, Agir'
-    - nom: Cahn
-      prenom: Mathieu
-      etiquette: PS
-    - nom: Barseghian
-      prenom: Jeanne
-      liste: Strasbourg écologiste et citoyenne
-    - nom: Vetter
-      prenom: Jean-Philippe
-      etiquette: LR
+  - etiquette: 'LREM, Modem, Agir'
+    nom: Fontanel
+    prenom: Alain
+  - etiquette: PS
+    nom: Trautmann
+    prenom: Catherine
+  - liste: Strasbourg écologiste et citoyenne
+    nom: Barseghian
+    prenom: Jeanne
+  - etiquette: LR
+    nom: Vetter
+    prenom: Jean-Philippe
 ---
+
