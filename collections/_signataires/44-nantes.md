@@ -1,17 +1,22 @@
 ---
 departement: '44'
-title: 'Nantes'
+title: Nantes
 candidats:
-    - nom: Oppelt
-      prenom: Valérie  
-      etiquette: LREM
-      liste: 'Nantes avec Vous'
-    - nom: Laernoes
-      prenom: Julie
-      etiquette: 'EELV'
-      liste: 'Nantes Ensemble'
-    - nom: Rolland
-      prenom: Johanna
-      etiquette: 'PS'
-      liste: 'Nantes en Confiance'
+  - etiquette: LREM
+    liste: Nantes avec Vous
+    nom: Oppelt
+    prenom: Valérie
+  - etiquette: EELV
+    liste: Nantes Ensemble
+    nom: Laernoes
+    prenom: Julie
+  - etiquette: PS
+    liste: Nantes en Confiance
+    nom: Rolland
+    prenom: Johanna
+  - etiquette: LR
+    liste: Mieux vivre à Nantes
+    nom: Garnier
+    prenom: Laurence
 ---
+
