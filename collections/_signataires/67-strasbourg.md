@@ -14,5 +14,8 @@ candidats:
   - etiquette: LR
     nom: Vetter
     prenom: Jean-Philippe
+  - liste: 'Agissons Ensemble, protégeons chacun'
+    nom: CUTAJAR
+    prenom: Chantal
 ---
 
