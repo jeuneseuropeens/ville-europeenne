@@ -3,7 +3,7 @@ departement: '78'
 title: Villepreux
 candidats:
   - liste: Tout simplement Villepreux
-    nom: Golgolad
+    nom: Golgolab
     prenom: Kouros
 ---
 
