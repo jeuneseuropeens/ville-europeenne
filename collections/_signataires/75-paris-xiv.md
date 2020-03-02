@@ -2,7 +2,7 @@
 departement: '75'
 title: Paris XIV
 candidats:
-  - nom: SANCHEZ-RUIVO
+  - nom: Sanchez-Ruivo
     prenom: Hermano
     etiquette: PS
     liste: Paris en Commun 14e
