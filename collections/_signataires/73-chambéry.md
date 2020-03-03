@@ -4,7 +4,7 @@ title: Chambéry
 candidats:
   - nom: Repentin
     prenom: Thierry
-  - nom: DANTIN
+  - nom: Dantin
     prenom: Michel
     liste: 'Aimer Chambéry, c''est agir avec vous'
 ---
