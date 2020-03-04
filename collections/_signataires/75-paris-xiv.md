@@ -6,9 +6,8 @@ candidats:
     prenom: Hermano
     etiquette: PS
     liste: Paris en Commun 14e
-  - nom: Tbled
-    prenom: Catherine
+  - nom: Aziere
+    prenom: Eric
     etiquette: LREM
     liste: Ensemble pour Paris avec Agnès Buzin
 ---
-
