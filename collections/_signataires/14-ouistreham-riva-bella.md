@@ -1,6 +1,6 @@
 ---
 departement: '14'
-title: Ouistreham riva bella
+title: Ouistreham Riva Bella
 candidats:
   - nom: Bail
     prenom: Rémi
