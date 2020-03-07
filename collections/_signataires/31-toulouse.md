@@ -4,6 +4,6 @@ title: Toulouse
 candidats:
   - nom: Moudenc
     prenom: Jean-Luc
-    etiquette: LR
-    liste: Pour Toulouse
+    etiquette: ''
+    liste: Aimer Toulouse avec Jean-Louis Moudenc
 ---
