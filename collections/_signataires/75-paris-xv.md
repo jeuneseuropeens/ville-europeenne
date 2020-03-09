@@ -5,5 +5,5 @@ candidats:
   - nom: Ibled
     prenom: Catherine
     etiquette: LREM
-    liste: Ensemble pour Paris avec Agnès Buzin
+    liste: Ensemble pour Paris avec Agnès Buzyn
 ---
