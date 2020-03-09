@@ -9,5 +9,5 @@ candidats:
   - nom: Aziere
     prenom: Eric
     etiquette: LREM
-    liste: Ensemble pour Paris avec Agnès Buzin
+    liste: Ensemble pour Paris avec Agnès Buzyn
 ---
