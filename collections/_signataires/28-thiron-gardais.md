@@ -1,9 +1,9 @@
 ---
 departement: '28'
-title: 'Thiron-Gardais'
+title: Thiron-Gardais
 candidats:
-    - nom: Provost
-      prenom: Victor
-      etiquette: ''
-      liste: ''
+  - nom: Provôt
+    prenom: Victor
+    etiquette: ''
+    liste: ''
 ---
