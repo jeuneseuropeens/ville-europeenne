@@ -5,7 +5,7 @@ candidats:
   - nom: Moudenc
     prenom: Jean-Luc
     etiquette: ''
-    liste: Aimer Toulouse avec Jean-Louis Moudenc
+    liste: Aimer Toulouse avec Jean-Luc Moudenc
   - nom: Pellefigue
     prenom: Nadia
     etiquette: PS
