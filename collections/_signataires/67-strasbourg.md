@@ -15,7 +15,6 @@ candidats:
     nom: Vetter
     prenom: Jean-Philippe
   - liste: 'Agissons Ensemble, protégeons chacun'
-    nom: CUTAJAR
+    nom: Cutajar
     prenom: Chantal
 ---
-
