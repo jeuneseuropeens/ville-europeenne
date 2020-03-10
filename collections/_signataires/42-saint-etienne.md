@@ -2,7 +2,7 @@
 departement: '42'
 title: Saint-Etienne
 candidats:
-  - nom: LONGEON
+  - nom: Longeon
     prenom: Olivier
     etiquette: EELV
     liste: Le temps de l'écologie
