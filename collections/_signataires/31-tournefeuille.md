@@ -6,5 +6,7 @@ candidats:
     liste: 'Tournefeuille audacieuse, inventive, solidaire'
     nom: Soulié
     prenom: Laurent
+  - liste: Liste Citoyenne Tournefeuille
+    nom: Meriodeau
+    prenom: Stéphane
 ---
-
