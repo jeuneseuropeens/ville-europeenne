@@ -8,4 +8,7 @@ candidats:
   - nom: Leblanc
     prenom: Jean-Paul
     liste: Achicourt Autrement
+  - nom: Willemaet
+    prenom: Didier
+    liste: Achicourt 2020
 ---
