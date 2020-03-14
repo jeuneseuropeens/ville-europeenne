@@ -6,4 +6,8 @@ candidats:
     prenom: Pierre-Yves
     etiquette: LREM
     liste: Ensemble pour Paris
+  - nom: Boux
+    prenom: Anne-Claire
+    etiquette: EELV
+    liste: L'écologie pour Paris
 ---
