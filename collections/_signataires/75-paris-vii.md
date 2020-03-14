@@ -1,6 +1,6 @@
 ---
 departement: '75'
-title: Paris VII
+title: Paris XVIII
 candidats:
   - nom: Bournazel
     prenom: Pierre-Yves
