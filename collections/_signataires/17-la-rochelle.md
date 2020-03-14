@@ -9,4 +9,7 @@ candidats:
     prenom: Jean-Marc
     etiquette: ''
     liste: Ensemble Osons l'Ecologie
+  - nom: El Marbouh
+    prenom: Jaouad
+    liste: 'Oui, à La Rochelle Unie !'
 ---
