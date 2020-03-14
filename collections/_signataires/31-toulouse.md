@@ -10,4 +10,8 @@ candidats:
     prenom: Nadia
     etiquette: PS
     liste: Une nouvelle énergie pour Toulouse
+  - nom: Biasotto
+    prenom: Franck
+    etiquette: MoDem
+    liste: 'Toulouse, belle et forte'
 ---
