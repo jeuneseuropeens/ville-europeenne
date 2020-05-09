@@ -1,10 +1,10 @@
 ---
-departement: '31'
+departement: "31"
 title: Toulouse
 candidats:
   - nom: Moudenc
     prenom: Jean-Luc
-    etiquette: ''
+    etiquette: ""
     liste: Aimer Toulouse avec Jean-Luc Moudenc
   - nom: Pellefigue
     prenom: Nadia
@@ -13,5 +13,8 @@ candidats:
   - nom: Biasotto
     prenom: Franck
     etiquette: MoDem
-    liste: 'Toulouse, belle et forte'
+    liste: Toulouse, belle et forte
+  - nom: Cohen
+    prenom: Pierre
+    liste: Pour la cohésion - l'autre projet
 ---
