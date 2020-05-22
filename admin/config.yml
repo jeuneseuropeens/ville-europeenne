@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
+publish_mode: editorial_workflow
 media_folder: 'assets/uploads'
 site_url: https://www.ville-europeenne.org
 display_url: https://www.ville-europeenne.org
@@ -9,7 +10,8 @@ show_preview_links: false
 locale: 'fr'
 collections:
   - name: 'signataires'
-    label: 'Signataires de la charte'
+    label: 'Communes'
+    label_singular: 'Commune'
     folder: 'collections/_signataires/'
     create: true
     slug: '{{departement}}-{{slug}}'
@@ -19,6 +21,8 @@ collections:
       - { label: 'Département', name: 'departement', widget: 'string' }
       - { label: 'Nom de la commune', name: 'title', widget: 'string' }
       - label: "Candidats"
+        label_singular: "Candidat"
+        description: "Candidats aux élections municipales 2020 et signataires de la charte
         name: "candidats"
         widget: "list"
         fields:
