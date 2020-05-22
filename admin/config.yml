@@ -22,7 +22,7 @@ collections:
       - { label: 'Nom de la commune', name: 'title', widget: 'string' }
       - label: "Candidats"
         label_singular: "Candidat"
-        description: "Candidats aux élections municipales 2020 et signataires de la charte
+        description: "Candidats aux élections municipales 2020 et signataires de la charte"
         name: "candidats"
         widget: "list"
         fields:
