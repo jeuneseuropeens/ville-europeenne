@@ -33,7 +33,7 @@
 
     <!--Feather icons-->
     <script src="https://unpkg.com/feather-icons"></script>
-    <!--Netlify CMS-->
+    <!--Netlify Identity-->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!--Favicons-->
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
@@ -74,6 +74,12 @@
                 }
             });
         }
+    </script>
+    <!-- Netlify CMS -->
+    <script>
+        import CMS from 'netlify-cms-app';
+        import { fr } from 'netlify-cms-locales';
+        CMS.registerLocale('fr', fr);
     </script>
 </body>
 </html>
