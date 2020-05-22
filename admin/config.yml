@@ -12,6 +12,7 @@ collections:
   - name: 'signataires'
     label: 'Communes'
     label_singular: 'Commune'
+    description: "Communes et leurs candidats aux élections municipales 2020 signataires de la charte"
     folder: 'collections/_signataires/'
     create: true
     slug: '{{departement}}-{{slug}}'
@@ -22,7 +23,6 @@ collections:
       - { label: 'Nom de la commune', name: 'title', widget: 'string' }
       - label: "Candidats"
         label_singular: "Candidat"
-        description: "Candidats aux élections municipales 2020 et signataires de la charte"
         name: "candidats"
         widget: "list"
         fields:
