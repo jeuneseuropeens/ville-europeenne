@@ -17,4 +17,8 @@ candidats:
   - nom: Cohen
     prenom: Pierre
     liste: Pour la cohésion - l'autre projet
+  - nom: Maurice
+    prenom: Antoine
+    etiquette: EELV, PS, LFI
+    liste: Archipel Citoyen
 ---
